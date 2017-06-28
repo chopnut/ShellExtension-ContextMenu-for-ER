@@ -212,7 +212,7 @@ STDMETHODIMP CSimpleShExt::InvokeCommand(
 		return E_INVALIDARG;
 
 
-	// ************************
+	// ***********************
 	// Do work below
 	if (m_selectedFiles.size() > 0){
 		// Step 1: Open stream for writing to the temp file
