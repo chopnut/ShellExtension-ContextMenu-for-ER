@@ -1,0 +1,33 @@
+// SimpleExt.idl : IDL source for SimpleExt
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SimpleExt.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(76673BF4-B4D2-48E4-A51E-03053E81002A),
+	pointer_default(unique)
+]
+interface ISimpleShExt : IUnknown{
+};
+[
+	uuid(E7F2651C-626C-4AF6-9EAA-0668EE18C014),
+	version(1.0),
+]
+library SimpleExtLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(29EC991D-88CD-4348-840B-F843BEA6BB20)		
+	]
+	coclass SimpleShExt
+	{
+		[default] interface ISimpleShExt;
+	};
+};
+
+import "shobjidl.idl";

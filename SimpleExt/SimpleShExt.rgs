@@ -1,0 +1,24 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {29EC991D-88CD-4348-840B-F843BEA6BB20} = s 'SimpleShExt Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+
+		}
+	}
+	NoRemove *
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove ErnanisRenamer.MyOwnExtension = s '{29EC991D-88CD-4348-840B-F843BEA6BB20}'
+			}
+		}
+	}
+}
