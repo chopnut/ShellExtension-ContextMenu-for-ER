@@ -220,7 +220,7 @@ STDMETHODIMP CSimpleShExt::InvokeCommand(
 
 		// Step 2: Read the registry key to find ErnanisRenamer location
 		std::wstring szProgram = ReadRegistryKey();
-
+		 
 		// Step 3: Create process to run the program with parameter of the path to the temp file.
 		if (!szFile.empty() && !szProgram.empty()){
 			CreateProcessNow(szProgram, szFile);
